@@ -27,12 +27,6 @@ public class Robot extends TimedRobot {
     spark = new CANSparkMax(0, MotorType.kBrushless);
   }
 
-  /**
-   * This function is called once when teleop is enabled.
-   */
-  @Override
-  public void teleopInit() {
-  }
 
   /**
    * This function is called periodically during operator control.
@@ -46,6 +40,7 @@ public class Robot extends TimedRobot {
 
     double power;
 
+    //Inverts power if told to do so by the SmartDashboard boolean
     if (SmartDashboard.getBoolean("Positive", true)) {
       power = .2;
     }

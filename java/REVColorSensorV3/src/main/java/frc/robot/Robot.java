@@ -33,6 +33,13 @@ public class Robot extends TimedRobot {
   int minProx = 100;
   int maxProx = 300;
 
+  public void robotInit() {
+    colorMatcher.addColorMatch(kBlueTarget);
+    colorMatcher.addColorMatch(kGreenTarget);
+    colorMatcher.addColorMatch(kRedTarget);
+    colorMatcher.addColorMatch(kYellowTarget);    
+  }
+
   /**
    * Reports the best color match and the proximity value of the sensor
    */
@@ -46,7 +53,7 @@ public class Robot extends TimedRobot {
   }
 
   public String getClosestColor() {
-    //Finds the closest WPI Color object Enum match
+    //Finds the closest WPI Color match
     Color detectedColor = colorSensor.getColor();
 
     //Compares the detected color to the above provided colors

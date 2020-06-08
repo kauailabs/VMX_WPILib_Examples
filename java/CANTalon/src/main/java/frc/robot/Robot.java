@@ -46,6 +46,7 @@ public class Robot extends TimedRobot {
 
     double power;
 
+    //Inverts power if told to do so by the SmartDashboard boolean
     if (SmartDashboard.getBoolean("Positive", true)) {
       power = .2;
     }

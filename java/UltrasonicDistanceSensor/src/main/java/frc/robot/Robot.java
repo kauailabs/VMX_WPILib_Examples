@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 /**
  * This is a sample program demonstrating how to find a distance using an Ultrasonic Sensor
  */
-
 public class Robot extends TimedRobot {
 
   // factor to convert sensor values to a distance in inches
